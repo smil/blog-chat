@@ -1,0 +1,60 @@
+doctype html
+html
+head
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no, minimal-ui, maximum-scale=1')
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    link(rel='stylesheet', href='/css/reset.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/formStyle.css')
+    link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/css/chat.css')
+
+    script.
+            function disList(){
+                var ul=document.querySelector('ul');
+                if(ul.style.display == 'block'){
+                    ul.style.display = 'none';
+                }else{
+                    ul.style.display = 'block';
+                }
+            }
+
+    body
+        -var name = user ? user.name : "游客";
+        label(class='welcome') 你好，#{name}
+
+        nav(class='header')
+            div
+                img(src='/img/home.png' onclick="disList()")
+
+                ul(class='home-list')
+                    li
+                        a(title="主页" href="/") home
+                    - if(user){
+                    li
+                        a(title="发表" href="/post") publish
+                    li
+                        a(title="登出" href="/loginOut") loginOut
+                    - }else{
+                    li
+                        a(title="登录" href="/login") login
+                    li
+                        a(title="注册" href="/register") register
+                    - }
+                    li
+                        a(title="聊天" href="/chat") chat
+
+
+        -if(error){
+        p(class='message-notify message-error')
+            span #{error}
+        -}else if(success){
+        p(class='message-notify message-success')
+            span #{success}
+        -}
+
+        block content
+
+
+
+

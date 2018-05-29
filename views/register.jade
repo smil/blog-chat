@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    form(method='post' class='form-body')
+        ul
+            li(class='item')
+                p
+                    label 用户名
+                    span *
+                p
+                    input(type='text' name='name' placeholder='请输入用户名' require)
+            li(class='item register')
+                p
+                    label 密码
+                    span *
+                p
+                    input(type='password' name='password1' placeholder='请输入密码' require)
+            li(class='item register')
+                p
+                    label 确认密码
+                    span *
+                p
+                    input(type='password' name='password2' placeholder='请输入确认密码' require)
+            li(class='item register')
+                p
+                    label 邮箱
+                p
+                    input(type='email' name='email' placeholder='请输入邮箱' require)
+        div(class='footer')
+            button(type='submit' value='注册' class='btn') 注册
+

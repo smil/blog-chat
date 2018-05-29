@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div(class='list-body')
+        -var len = resultList.length;
+        - if(!len){
+        p(class='noDate') 没有数据:)
+        - }else{
+        ul
+            - for(var i=0;i<len;i++){
+            li(class='item')
+                a(style="display: block" href="/detail/" + resultList[i].id)
+                    p(class='title') #{resultList[i].title}
+                    p(class='content') #{resultList[i].content}
+                    - if(!user){
+                    p(class="time-aut")
+                        span #{resultList[i].time}
+                        span #{resultList[i].author}
+                    - }else{
+                    p(class='del-upd')
+                        a(class="right" href='/post/edit/' + resultList[i].id)  更新&nbsp;&nbsp;
+                        a(class="right" href='/post/delete/' + resultList[i].id) 删除&nbsp;&nbsp;
+                    - }
+            - }
+        - }

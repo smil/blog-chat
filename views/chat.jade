@@ -1,0 +1,30 @@
+
+extends layout
+
+block content
+  div(class="wrapper")
+    div(class='content' id='content')
+
+      
+      - if(first){
+      form(method='post' class='user-info')
+
+        p
+          label 请输入聊天用的昵称
+
+        p
+          input(name='userName' placeholder='请输入昵称')
+          button(type='submit' value='确定') 确定
+        
+
+      
+      - }else{
+      div(class='action')
+        span(id="userName" style="display: none;") #{userName}
+        textarea(id='message' placeholder='请输入内容')
+        button(id="send" value='发送') 发送
+      - }
+
+
+  script(src="js/browser.js")
+        

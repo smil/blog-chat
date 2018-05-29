@@ -1,0 +1,58 @@
+/* index.jade */
+.list-body{
+    /*width:80%;*/
+    margin: 30px auto 0;
+}
+.list-body .noDate{
+    text-align: center;
+}
+.list-body ul .item{
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.list-body ul .item .title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #71ba8f;
+    padding-bottom: 10px;
+}
+.list-body ul .item .content{
+    width:80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list-body ul .item .time-aut span:nth-child(1){
+    font-size: 14px;
+}
+.list-body ul .item .time-aut span:nth-child(2){
+    float: right;
+    color: #ed6d2a;
+}
+.list-body ul .item .del-upd .right{
+    float: right;
+    color: #ed6d2a;
+}
+
+
+
+
+
+/* detail.jade */
+.detail-body{
+    margin: 100px auto 0;
+}
+.detail-body .title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #71ba8f;
+}
+.detail-body .time{
+    text-align: right;
+}
+.detail-body .content{
+    padding: 10px;
+}

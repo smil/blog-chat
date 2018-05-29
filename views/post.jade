@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    form(method='post' class='form-body')
+        div
+            div(class='item')
+                p
+                    label 标题
+                    span *
+                p
+                    - if(!detail){
+                    input(type='text' name='title' placeholder='请输入标题名称')
+                    - }else{
+                    input(type='text' name='title' placeholder='请输入标题名称' value='#{detail.title}')
+                    - }
+
+            div(class='item')
+                p
+                    label 正文
+                    span *
+                p
+                    - if(!detail){
+                    textarea(name='content' placeholder='请输入正文内容' style='height: 65px')
+                    -}else{
+                    textarea(name='content' placeholder='请输入正文内容' style='height: 65px') #{detail.content}
+                    -}
+            div(class='footer')
+                button(type='submit' value='发布') 发布

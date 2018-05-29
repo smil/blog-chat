@@ -1,0 +1,69 @@
+
+.wrapper{
+    width: 100%;
+}
+
+.wrapper .content{
+   margin-top: 30px;
+   overflow: hidden;
+   overflow-y: scroll;
+}
+.wrapper .content p{
+    font-size: 13px;
+}
+.wrapper .content .time{
+    text-align: center;
+}
+.wrapper .content .userName{
+    color: #d6d6d6;
+}
+.wrapper .content .my-message .userName{
+    display: none;
+}
+.wrapper .content .text{
+    width: fit-content;
+    padding: 2px 10px;
+    background: orange;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.wrapper .content .my-message .text{
+    float: right;
+}
+.wrapper .user-info{
+    margin-top: 20%;
+}
+.wrapper .user-info p{
+    margin-bottom: 10px;
+}
+.wrapper .user-info input{
+    line-height: 25px;
+    padding-left: 5px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.wrapper .user-info button{
+    width: 40px;
+    height: 25px;
+    font-size: 13px;
+    line-height: 25px;
+    margin-left: 20px;
+}
+.wrapper .action{
+    position: fixed;
+    bottom: 50px;
+    left: 10%;
+    width: 80%;
+
+}
+.wrapper .action textarea{
+    width: calc(100% - 100px);
+    font-size: 16px;
+    height: 30px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+.wrapper .action button{
+    float: right;
+}
